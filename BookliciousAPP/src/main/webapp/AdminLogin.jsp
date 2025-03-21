@@ -212,7 +212,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="filter: invert(1);"></button>
             </div>
             <div class="modal-body">
-                <form action="forgotPassword" method="post">
+                <form action="forgetPassword" method="post">
                     <label for="email" style="font-weight: bold;">Enter your email ID</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required 
                            style="margin-top: 5px; background-color: #222; color: white; border: 1px solid #555;">

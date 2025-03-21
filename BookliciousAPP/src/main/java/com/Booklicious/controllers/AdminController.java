@@ -55,17 +55,17 @@ RestTemplate restTemplate= new RestTemplate();
 	@PostMapping("/updatePassword")
 	public String updatePassword(String opass,String npass, String rpass,ModelMap m , HttpSession session) {
 		String id = (String)session.getAttribute("id");
-		String API= "updatePassword/"+opass+"/"+npass+"/"+rpass+"/"+id;
-		ResponseEntity<String> result = restTemplate.exchange(URL+API,HttpMethod.POST,null,String.class);
+		String API= "admin/updatePassword/"+opass+"/"+npass+"/"+rpass+"/"+id;
+		ResponseEntity<String> result = restTemplate.exchange(URL+API,HttpMethod.PUT,null,String.class);
 		String msg = result.getBody();
 
 		m.addAttribute("msg", msg);
 		return "AdminHome";
 	}
     
-	@RequestMapping("/forgotPassword")
-	public String forgotPassword(String email, ModelMap m) {
-		String API = "forgotPassword/"+email;
+	@PostMapping("/forgetPassword")
+	public String forgetPassword(String email, ModelMap m) {
+		String API = "admin/forgetPassword/"+email;
 		ResponseEntity<String> result = restTemplate.exchange(URL+API, HttpMethod.POST,null,String.class);
 		String msg = result.getBody();		
 		m.addAttribute("msg",msg);
