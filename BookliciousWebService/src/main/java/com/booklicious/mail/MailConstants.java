@@ -2,5 +2,5 @@ package com.booklicious.mail;
 
 public class MailConstants {
 	final static public String EMAIL="piyushgupta249@gmail.com";
-	final static public String PASSWORD="orsf gjoh jgyv kuep";
+	final static public String PASSWORD="";
 }
